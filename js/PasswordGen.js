@@ -1,3 +1,9 @@
+/***********************************************
+ **	PasswordGen.js
+ ***********************************************
+ **	http://password-gen.cerf-de-pixel.fr/
+ ***********************************************/
+
 var typeChar = {
 	"majuscules"            : {"name" : "lettres majuscules",     "default" : true , "charMap" : "AZERTYUIOPQSDFGHJKLMWXCVBN"},
 	"minuscules"            : {"name" : "lettres minuscules",     "default" : true , "charMap" : "azertyuiopqsdfghjklmwxcvbn"},
