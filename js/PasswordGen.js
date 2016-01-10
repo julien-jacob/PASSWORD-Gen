@@ -81,7 +81,7 @@ function passwordGen (nbChar, charMap) {
 	var password = "";
 
 	if (!charMap) 	{ charMap = defaultCharMat; }
-	if (nbChar < 1) { nbChar = 12; }
+	if (nbChar < 1) { nbChar = 16; }
 
 	do {
 		for( var i=0; i < nbChar; i++ ) {
