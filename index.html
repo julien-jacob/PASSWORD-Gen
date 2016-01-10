@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="author"      content="Julien JACOB">
+		<meta name="keywords"    content="mots de passe, mot de passe, générateur de mot de passe, generateur mot de passe, comment trouver un mot de passe, mot passe, générateur mot de passe, generateur de mot de passe, le mot de passe, logiciel mot de passe, trouver un mot de passe, les mots de passe, trouver mot de passe">
+		<meta name="description" content="Générateur de mots de passe aléatoire à forte sécurité en ligne.">
+		
 		<title>PASSWORD-Gen | Générateur de mots de passe aléatoires</title>
 
 		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -22,91 +25,166 @@
 	</head>
 	<body>
 
-	<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-		<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"><span class=" text-danger">PASSWORD-Gen</span></a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-		          <li class="dropdown">
-		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Plus outils <span class="caret"></span></a>
-		            <ul class="dropdown-menu">
-		              <li><a href="http://htaccess-gen.cerf-de-pixel.fr/"> HTACCESS-Gen : Générateur de .htaccess et .htpassword</a></li>
-		              <li><a href="http://password-gen.cerf-de-pixel.fr/"> WalkSAT : SAT-Solver codé en JavaScript </a></li>
-		            </ul>
-		          </li>
-		          <li><a href="http://cerf-de-pixel.fr/"> Visiter Cerf-de-pixel.fr </a></li>
-		          </ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
-
-	<header class="container">
-		<h1>
-			PASSWORD - Gen <br>
-			<small>Générateur de mots de passe aléatoires</small>
-		</h1>
-	</header>
-
-
-	<div class="jumbotron middle">
-		<div class="container">
-
-			<div class="col-md-5">
-				<h2> <i class="fa fa-lock"></i> Mots de passe générés</h2>
-
-				<div class="well">
-
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-key"></i></span>
-						<input class="form-control" type="text" id="inputPassword1">
-					</div>
-					<br>
-
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-key"></i></span>
-						<input class="form-control" type="text" id="inputPassword2">
-					</div>
-					<br>
-
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-key"></i></span>
-						<input class="form-control" type="text" id="inputPassword3">
-					</div>
-					<br>
-
-					<a onclick="generatePasswordOnPage();" class="btn btn-primary btn-block"><i class="fa fa-refresh"></i> Re-générer une série de mots de passe</a>
-				</div> <!-- end .well -->
-			</div> <!-- end col-md-5 -->
-
-			<div class="col-md-5 col-md-offset-2">
-				<h2> <i class="fa fa-cogs"></i> Options de génération</h2>
-
-				<div class="well">
-					<div class="form-group form-inline">
-						<label for="exampleInputName2"> Taille du mot de passe </label>
-						<input type="number" class="form-control" id="passwordSize" value="12" min="1">
-					</div>
-
-					<div class="form-group checkbox">
-
-						<script type="text/javascript">
-							printUseCharsOptions();
-						</script>
-					</div>
-					</div>
+		<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><span class=" text-danger">PASSWORD-Gen</span></a>
 				</div>
-			</div> <!-- end .col-md-5 -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+			          <li class="dropdown">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Plus outils <span class="caret"></span></a>
+			            <ul class="dropdown-menu">
+			              <li><a href="http://htaccess-gen.cerf-de-pixel.fr/"> HTACCESS-Gen : Générateur de .htaccess et .htpassword</a></li>
+			              <li><a href="http://password-gen.cerf-de-pixel.fr/"> WalkSAT : SAT-Solver codé en JavaScript </a></li>
+			            </ul>
+			          </li>
+			          <li><a href="http://cerf-de-pixel.fr/"> Visiter Cerf-de-pixel.fr </a></li>
+			          </ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
 
+		<header class="container">
+			<h1>
+				PASSWORD - Gen <br>
+				<small>Générateur de mots de passe aléatoires</small>
+			</h1>
+		</header>
+
+
+		<div class="jumbotron middle">
+			<div class="container">
+
+				<div class="col-md-5">
+					<h2> <i class="fa fa-lock"></i> Mots de passe générés</h2>
+
+					<div class="well">
+
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-key"></i></span>
+							<input class="form-control" type="text" id="inputPassword1">
+						</div>
+						<br>
+
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-key"></i></span>
+							<input class="form-control" type="text" id="inputPassword2">
+						</div>
+						<br>
+
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-key"></i></span>
+							<input class="form-control" type="text" id="inputPassword3">
+						</div>
+						<br>
+
+						<a onclick="generatePasswordOnPage();" class="btn btn-primary btn-block"><i class="fa fa-refresh"></i> Re-générer une série de mots de passe</a>
+					</div> <!-- end .well -->
+				</div> <!-- end col-md-5 -->
+
+				<div class="col-md-5 col-md-offset-2">
+					<h2> <i class="fa fa-cogs"></i> Options de génération</h2>
+
+					<div class="well">
+						<div class="form-group form-inline">
+							<label for="passwordSize"> Taille du mot de passe </label>
+							<input type="number" class="form-control" id="passwordSize" value="12" min="1">
+						</div>
+
+						<div class="form-group checkbox">
+							<script type="text/javascript"> printUseCharsOptions(); </script>
+						</div>
+					</div> 
+				</div> <!-- end .col-md-5 -->
+			</div>
+		</div>
+
+
+		<div>
+			<div class="container">
+				<div class="well">
+					<h2>PASSWORD-Gen : Générateur de mots de passe aléatoire</h2>
+					<hr>
+					<p>PASSWORD-Gen est un générateur de mots de passe aléatoire en ligne codé en JavaScript. Son code source est disponible sur GitHub.</p>
+				</div>
+				<div class="well">
+					<h2>Pourquoi utiliser des mots de passe aléatoires</h2>
+					<hr>
+					<p>Le point le plus faible de la sécurité de vos comptes en ligne est généralement votre mot de passe. Les mots de passe traditionnels ne sont plus sécuritaires. Les techniques de piratage ont évoluées rapidement et de manière significative au cours des dernières décennies, mais la façon dont nous créons nos mots de passe n'a pas suivi le rythme. Les attaques de mot de passe les plus récentes et les plus efficaces peuvent tenter jusqu'à 300 milliards de suppositions par seconde, et ce nombre sera sans aucun doute augmenter au cours des prochaines années.</p>
+				</div>
+				<div class="well">
+					<h2>Comment trouver un bon mot de passe non-aléatoire</h2>
+					<hr>
+					<h3>Un mot de passe à forte sécurité</h3>
+					<p>Un mot de passe correct répond aux critères suivants:</p>
+
+					<ul>
+						<li><p>Le plus important pour un mot de passe fort ça longueur (le plus sera le mieux); Au moins quinze (15) caractères.</p></li>
+						<li>Ne contient pas d'élements en lien avec vos renseignements personnels (votre nom d'utilisateur, nom, date de naissance, nom de l'organisation, les noms ou les noms de vos animaux, membres de la famille).</li>
+						<li>Ne contient pas de mots du dictionnaire.</li>
+						<li>Est significativement différent de votre mot de passe précédent.</li>
+						<li>Devrait contenir 4 des types de caractères suivants.</li>
+						<ul>
+							<li>Les lettres majuscules (AZERTYUIOPQSDFGHJKLMWXCVBN)</li>
+							<li>Les lettres minuscules (azertyuiopqsdfghjklmwxcvbn)</li>
+							<li>Les nombres (0123456789)</li>
+							<li>Les minuscules accentuées (àâäãçéèêëìîïñòôöõùûüÿ)</li>
+							<li>Les caractères spéciaux (@#µ§\\)</li>
+							<li>Les symboles mathématiques (=-+*/%)</li>
+							<li>Les unités monétaires (€$¤£)</li>
+						</ul>
+					</ul>
+
+					<h3>Les phrases de passe</h3>
+					<p>Parce que la longueur d'un mot de passe est l'un des principaux facteurs de sécurité, les phrases de passe sont beaucoup plus sûrs que les mots de passe traditionnels. Dans le même temps, ils sont également beaucoup plus facile à retenir et le type.</p>
+
+					<p>Ils ne sont pas aussi forts que des mots de passe générés aléatoirement par HTACCESS-Gen, mais ils sont toujours une bonne option si vous ne voulez pas utiliser un générateur de mot de passe. Ils sont aussi la meilleure façon de générer le mot de passe principal pour un gestionnaire de mot de passe ou votre compte du système d'exploitation, puisque ils ne peuvent être remplis automatiquement par un gestionnaire de mot de passe.</p>
+
+					<p>Choisissez plusieurs mots aléatoires. Ajoutez quelques lettres majuscules des nombres et des symboles.Vous pouvez ajouter des espaces entre les mots si vous préférez.</p>
+					<p>Par exemple : </p>
+					<ul>
+						<li>fleure bateau manger guichet </li>
+						<li>fleure_bateau-manger/guichet </li>
+						<li>FleuRe2 baTeau mAngRr55 gUiCHet </li>
+						<li>fleUre#bateaU$manger%gUichet </li>
+					</ul>
+
+				</div>
+				<div class="well">
+					<h2>Les choses à éviter</h2>
+					<hr>
+					<p>Ne placez pas les mots dans un modèle prévisible ou former une phrase correcte; ce serait beaucoup plus facile à deviner.</p>
+
+					<p>Ne pas utiliser des paroles de chansons, des citations ou toute autre chose qui a été publié. Les attaquants ont des bases de données massives d'œuvres publiées pour construire à partir de mots de passe possibles.</p>
+						
+					<p>Ne pas utiliser de renseignements personnels. Même lorsque combiné avec des lettres et des chiffres, quelqu'un qui vous connaît, ou peut vous recherche en ligne, peut facilement deviner un mot de passe avec cette information.</p>
+
+					<p>Ne pas utiliser le même mot de passe sur plusieurs comptes. Une récente étude menée au Royaume-Uni a démontré que 55 % des utilisateurs se servaient d’un même mot de passe, la plupart du temps « faible », pour se connecter à de multiples sites présents sur Internet. De nombreux sites populaires ne parviennent pas à assurer adéquatement la sécurité de votre mot de passe dans leurs systèmes, et les pirates les cassent régulièrement et accèdent à des centaines de millions de comptes. Si vous réutilisez vos mots de passe, quelqu'un qui hacks un seul site sera capable de se connecter à vos comptes sur d'autres sites. Assurez-vous que vous avez des mots de passe uniques pour tous les sites qui stockent des données financières ou autres sensibles, ou ceux qui pourraient être utilisés pour nuire à votre réputation.</p>
+
+					<p>Assurez-vous que votre mot de passe de messagerie est également forte. Avec de nombreux services en ligne, votre adresse e-mail sert votre identification. Si un utilisateur malveillant accéde à votre courrier électronique, il peut facilement réinitialiser les mots de passe et se connecter à votre compte.</p>
+
+					<p>Ne partagez pas vos mots de passe. Même si vous faites confiance à la personne, il est possible qu'un attaquant intercepte ou espionne la transmission, ou pirater l'ordinateur de cette personne. Si vous soupçonnez que quelqu'un d'autre connaît votre mot de passe, vous devez le changer immédiatement.</p>
+
+					<p>Ne pas envoyer votre mot de passe dans un courriel. Les e-mails sont rarement cryptés, ce qui les rend relativement facile pour les attaquants à lire.</p>
+
+					<p>Ne sauvegardez pas vos mots de passe dans un navigateur Web. Ils omettent souvent de stocker les mots de passe de manière sécurisée, afin utiliser un gestionnaire de mot de passe à la place. Voir la section sur les gestionnaires de mot de passe ci-dessus pour plus d'informations.</p>
+
+					<p>Sur un ordinateur public, ne pas enregistrer les mots de passe et utiliser "Remember Me" dans les options. Si vous le faites, alors la prochaine personne à utiliser l'ordinateur sera en mesure d'accéder à votre compte. Assurez-vous également de vous déconnectez et de fermez le navigateur lorsque vous avez terminé.</p>
+
+					<p>Ne pas écrire votre mot de passe. Si il est écrit quelque part et que quelqu'un peut le trouver, alors il n'est pas sûr.</p>
+
+					<p>e changez pas vos mots de passe, à moins que vous soupçonnez qu'ils aient été compromis. Tant que vous avez le type de mot de passe fort recommandé dans cet article, le changer fréquemment ne fera rien pour minimiser le risque qu'il soit compromise.</p>
+				</div>
+			</div>
 		</div>
 
 		<footer class="container">
