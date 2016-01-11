@@ -3,6 +3,7 @@ body {
   height: 100%;
   background-image: url("../img/bg.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 .middle {
   margin-top: 4%;
